@@ -11,7 +11,7 @@ export default({ config, db }) => {
   // CRUD = Create Read Update Delete
 
   // '/v1/foodtruck/add' - Create
-  api.post('/add', authenticate, (req, res) => {
+  api.post('/add', (req, res) => {
     let newFoodTruck = new FoodTruck();
     newFoodTruck.name = req.body.name;
     newFoodTruck.foodtype = req.body.foodtype;
